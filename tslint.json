@@ -1,0 +1,20 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+
+    "tslint:recommended",
+    "tslint-config-standard",
+    "tslint-eslint-rules"
+  ],
+  "jsRules": {},
+  "rules": {
+    "callable-types": [
+      false
+    ],
+    "no-console": [false],
+    "no-debugger": [false],
+    "no-unused-vars": [false],
+    "prefer-const": [false]
+  },
+  "rulesDirectory": []
+}

@@ -1,5 +1,6 @@
 import { createApp, h, watchEffect, ref } from 'vue'
 import './tsapi/types'
+import './tsapi/interface'
 
 createApp({
   render (contxt:any) {
@@ -7,7 +8,7 @@ createApp({
   },
   data () { return { } },
   mounted () {
-    console.log(this.message, 'message on mounted')
+    // console.log(this.message, 'message on mounted')
   },
   setup () {
     const message = ref('Hello!')
