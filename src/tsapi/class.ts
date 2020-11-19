@@ -67,41 +67,41 @@
 // const a1 = new A('lison')
 // console.log(a1.name)
 
-class Parent {
-  public static getAge () {
-    return Parent.age
-  }
+// class Parent {
+//   public static getAge () {
+//     return Parent.age
+//   }
 
-    private static age: number = 18
-    // constructor () {}
-}
-const p = new Parent()
-// console.log(p.age)
-// console.log(Parent.age)
+//     private static age: number = 18
+//     // constructor () {}
+// }
+// const p = new Parent()
+// // console.log(p.age)
+// // console.log(Parent.age)
 
-class Info {
-    public name: string
-    public age?: number
-    private _infoStr: string
-    constructor (name: string, age?: number, public sex?: string) {
-      this.name = name
-      this.age = age
-    }
+// class Info {
+//     public name: string
+//     public age?: number
+//     private _infoStr: string
+//     constructor (name: string, age?: number, public sex?: string) {
+//       this.name = name
+//       this.age = age
+//     }
 
-    get infoStr () {
-      return this._infoStr
-    }
+//     get infoStr () {
+//       return this._infoStr
+//     }
 
-    set infoStr (value) {
-      // console.log(`setter: ${value}`)
-      this._infoStr = value
-    }
-}
+//     set infoStr (value) {
+//       // console.log(`setter: ${value}`)
+//       this._infoStr = value
+//     }
+// }
 // const info1 = new Info('lison')
 // console.log(info1)
 // const info3 = new Info('lison', 18)
-const info4 = new Info('lison', 18, 'man')
-info4.infoStr = 'lison: 18'
+// const info4 = new Info('lison', 18, 'man')
+// info4.infoStr = 'lison: 18'
 // console.log(info4.infoStr)
 
 // abstract class People {
@@ -140,9 +140,9 @@ info4.infoStr = 'lison: 18'
 // }
 // p2 = new Animal('haha')
 
-interface FoodInterface {
-    type: string
-}
+// interface FoodInterface {
+//     type: string
+// }
 // class FoodClass implements FoodInterface {
 //     public type: string
 // }

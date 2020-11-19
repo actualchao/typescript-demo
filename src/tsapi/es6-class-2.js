@@ -1,11 +1,11 @@
 function Food () {
-    this.type = 'food'
+  this.type = 'food'
 }
 Food.prototype.getType = function () {
-    return this.type
+  return this.type
 }
 function Vegetables (name) {
-    this.name = name
+  this.name = name
 }
 Vegetables.prototype = new Food()
 const tomato = new Vegetables('tomato')
@@ -38,8 +38,8 @@ const tomato = new Vegetables('tomato')
 
 // super作为函数
 // super作为对象
-    // 在普通方法中 -》 父类的原型对象
-    // 在静态方法中 -》 父类
+// 在普通方法中 -》 父类的原型对象
+// 在静态方法中 -》 父类
 
 // class Parent {
 //     constructor () {
@@ -69,28 +69,30 @@ const tomato = new Vegetables('tomato')
 // Child.getParentType()
 
 class Parent {
-    constructor () {
-        this.name = 'parent'
-    }
-    print () {
-        console.log(this.name)
-    }
+  constructor () {
+    this.name = 'parent'
+  }
+
+  print () {
+    console.log(this.name)
+  }
 }
 class Child extends Parent {
-    constructor () {
-        super()
-        this.name = 'child'
-    }
-    childPrint () {
-        super.print()
-    }
+  constructor () {
+    super()
+    this.name = 'child'
+  }
+
+  childPrint () {
+    super.print()
+  }
 }
 const c = new Child()
 c.childPrint()
 
 // prototype
 // __proto__
-var objs = new Object()
+let objs = new Object()
 console.log(objs.__proto__ === Object.prototype)
 
 // 子类的__proto__指向父类本身
@@ -108,9 +110,9 @@ console.log(objs.__proto__ === Object.prototype)
 // Object
 
 class CustomArray extends Array {
-    constructor (...args) {
-        super(...args)
-    }
+  constructor (...args) {
+    super(...args)
+  }
 }
 const arr = new CustomArray(3, 4, 5)
 // arr.fill('+')

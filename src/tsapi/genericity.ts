@@ -1,3 +1,7 @@
+/**
+ * 泛型
+ */
+
 function identity<T> (arg: T): T {
   return arg
 }
@@ -13,3 +17,9 @@ function getProperty<T, U extends keyof T> (obj:T, key:U) {
 }
 
 getProperty({ a: 123, b: 123 }, 'a')
+
+console.log(document.getElementById('app'))
+
+export default function (a:number, b:String):string {
+  return `${a},${b}`
+}
