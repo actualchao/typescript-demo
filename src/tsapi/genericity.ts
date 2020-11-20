@@ -20,6 +20,11 @@ getProperty({ a: 123, b: 123 }, 'a')
 
 console.log(document.getElementById('app'))
 
-export default function (a:number, b:String):string {
+interface Info1<T> {
+  name: T,
+  age: number
+}
+
+export default function (a:Info1<string>, b:String):string {
   return `${a},${b}`
 }

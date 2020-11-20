@@ -4,6 +4,8 @@ import './tsapi/interface'
 import './tsapi/enum'
 import './tsapi/genericity'
 import './tsapi/test.js'
+import './tsapi/advanced-type'
+
 createApp({
   render (contxt:any) {
     return h('div', contxt.message)
