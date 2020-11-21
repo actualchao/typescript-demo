@@ -1,10 +1,13 @@
 import { createApp, h, watchEffect, ref } from 'vue'
-import './tsapi/types'
-import './tsapi/interface'
-import './tsapi/enum'
-import './tsapi/genericity'
-import './tsapi/test.js'
-import './tsapi/advanced-type'
+// import './tsapi/types'
+// import './tsapi/interface'
+// import './tsapi/enum'
+// import './tsapi/genericity'
+import aa from './tsapi/test.js'
+// import './tsapi/advanced-type'
+import './tsapi/tsModules/index'
+
+console.log(aa)
 
 createApp({
   render (contxt:any) {
