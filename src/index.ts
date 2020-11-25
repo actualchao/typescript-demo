@@ -3,11 +3,11 @@ import { createApp, h, watchEffect, ref } from 'vue'
 // import './tsapi/interface'
 // import './tsapi/enum'
 // import './tsapi/genericity'
-import './tsapi/test.js'
+// import './tsapi/test.js'
 // import './tsapi/advanced-type'
 // import './tsapi/tsModules/index'
 // import './tsapi/decorator'
-import './tsapi/mixin'
+// import './tsapi/mixin'
 
 createApp({
   render (contxt:any) {
