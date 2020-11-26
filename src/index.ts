@@ -1,4 +1,4 @@
-import { createApp, h, watchEffect, ref } from 'vue'
+import { createApp, h, watchEffect, ref, reactive, watch } from 'vue'
 // import './tsapi/types'
 // import './tsapi/interface'
 // import './tsapi/enum'
@@ -14,8 +14,17 @@ createApp({
     return h('div', contxt.message)
   },
   data () { return { } },
+  created () {
+    console.log(this.timer)
+  },
   mounted () {
     console.log(document.getElementById('app'))
+
+    console.log(this.timer)
+
+    setTimeout(() => {
+      console.log(this.timer)
+    }, 5000)
 
     const button:HTMLButtonElement = document.createElement('button')
 
@@ -28,14 +37,28 @@ createApp({
   setup () {
     const message = ref('Hello!')
 
+    const _timer = { time: [new Date()] }
+
+    const timer = reactive(_timer)
+
+    watch(() => timer.time, v => {
+      console.log(v)
+      return v
+    }, {
+      immediate: true
+    })
+
     watchEffect(() => {
       console.log(message.value)
     })
 
     setTimeout(() => {
       message.value = '123123'
+      timer.time = [new Date()]
+
+      console.log(timer.time)
     }, 5000)
 
-    return { message }
+    return { message, timer }
   }
 }).mount('#app')
